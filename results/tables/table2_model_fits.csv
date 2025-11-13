@@ -1,0 +1,7 @@
+method,task,dominant_model
+Self-report,Grid,SDT
+Self-report,Gabor,SDT
+Self-report,Brightness,SDT
+Logits-based,Grid,PE
+Logits-based,Gabor,SDT
+Logits-based,Brightness,SDT

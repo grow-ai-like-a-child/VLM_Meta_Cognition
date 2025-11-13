@@ -1,0 +1,12 @@
+vlm,self_report_Grid,self_report_Gabor,self_report_Brightness,logits_Grid,logits_Gabor,logits_Brightness
+qwen2.5-vl-7b,SDT,SDT,SDT,SDT,BCH,SDT
+qwen2.5-vl-72b,SDT,SDT,SDT,PE,SDT,SDT
+ovis2_34b,SDT,BCH,BCH,BCH,BCH,SDT
+kimi-vl-a3b,BCH,SDT,SDT,SDT,SDT,SDT
+gemma3_27b,SDT,SDT,SDT,PE,SDT,SDT
+qwen2.5-vl-32b,SDT,BCH,BCH,LogN,SDT,SDT
+PE,0,0,0,2,0,0
+BCH,1,2,2,1,2,0
+SDT,5,4,4,2,4,6
+LogN,0,0,0,1,0,0
+WEV,0,0,0,0,0,0

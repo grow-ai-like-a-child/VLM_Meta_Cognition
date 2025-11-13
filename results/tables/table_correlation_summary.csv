@@ -1,0 +1,5 @@
+metric,value,description
+mean_spearman_rho,0.21050428773684304,平均Spearman相关系数
+mean_pearson_r,0.1965333643752145,平均Pearson相关系数
+mean_r_squared,0.052707988795650064,平均R²值
+total_samples,16128.0,总样本数

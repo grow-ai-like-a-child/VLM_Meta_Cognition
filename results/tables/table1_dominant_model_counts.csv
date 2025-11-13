@@ -1,0 +1,6 @@
+vlm,self_report_Grid,self_report_Gabor,self_report_Brightness,logits_Grid,logits_Gabor,logits_Brightness
+PE,0,0,0,2,0,0
+BCH,1,2,2,1,2,0
+SDT,5,4,4,2,4,6
+LogN,0,0,0,1,0,0
+WEV,0,0,0,0,0,0
