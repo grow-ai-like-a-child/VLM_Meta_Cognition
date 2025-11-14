@@ -36,3 +36,11 @@ ENV/
 # Intermediate data (optional - uncomment if you don't want to commit intermediate data)
 # data/intermediate/
 
+# Exclude documentation files
+*.md
+META_D_*.md
+
+# Exclude literature and Overleaf
+文献/
+Overleaf/
+
