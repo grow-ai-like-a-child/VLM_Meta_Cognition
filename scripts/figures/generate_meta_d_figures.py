@@ -117,11 +117,13 @@ def plot_open_source_comparison(base_dir):
                  f'{val:.3f}', ha='center', va='bottom', fontsize=14, weight='bold')
     
     ax_a.axhline(y=1, color='gray', linestyle='--', alpha=0.6, linewidth=2, label='Ideal (M_ratio=1)')
-    ax_a.set_ylabel('M-ratio', fontsize=16, weight='bold')
+    ax_a.set_ylabel('M-ratio', fontsize=18, weight='bold')
+    ax_a.set_xlabel('', fontsize=18, weight='bold')  # 无x轴标签
     ax_a.set_title("(A) M-ratio by Method", fontsize=17, weight='bold', pad=15)
     ax_a.legend(loc='upper left', frameon=True, fancybox=True, shadow=True, fontsize=12)
     ax_a.grid(axis='y', alpha=0.3, linestyle='--')
     ax_a.set_ylim([0, max(m_ratios) + max(m_ratio_stds) + 0.5])
+    ax_a.tick_params(axis='both', labelsize=14)  # 放大刻度标签
     
     # Panel B: 按任务比较 - M-ratio
     ax_b = fig.add_subplot(gs[0, 1])
@@ -144,13 +146,14 @@ def plot_open_source_comparison(base_dir):
                          f'{val:.3f}', ha='center', va='bottom', fontsize=11, weight='bold')
     
     ax_b.axhline(y=1, color='gray', linestyle='--', alpha=0.6, linewidth=2)
-    ax_b.set_xlabel('Task', fontsize=16, weight='bold')
-    ax_b.set_ylabel('M-ratio', fontsize=16, weight='bold')
+    ax_b.set_xlabel('', fontsize=18, weight='bold')  # 去掉"Task"标签
+    ax_b.set_ylabel('M-ratio', fontsize=18, weight='bold')
     ax_b.set_title("(B) M-ratio by Task", fontsize=17, weight='bold', pad=15)
     ax_b.set_xticks(x)
-    ax_b.set_xticklabels(tasks, fontsize=13)
+    ax_b.set_xticklabels(tasks, fontsize=14)  # 放大x轴刻度标签
     ax_b.legend(loc='upper left', frameon=True, fancybox=True, shadow=True, fontsize=12)
     ax_b.grid(axis='y', alpha=0.3, linestyle='--')
+    ax_b.tick_params(axis='both', labelsize=14)  # 放大刻度标签
     
     # 保存
     output_path = os.path.join(base_dir, 'results', 'figures', 'meta_d', 'meta_d_comparison_open_source.pdf')
@@ -220,11 +223,12 @@ def plot_closed_source(base_dir):
                          title='Task', title_fontsize=12,
                          bbox_to_anchor=(0.28, 1.0))
     
-    ax_a.set_xlabel("d' (Type 1 d')", fontsize=16, weight='bold')
-    ax_a.set_ylabel("meta-d'", fontsize=16, weight='bold')
+    ax_a.set_xlabel("d' (Type 1 d')", fontsize=14, weight='bold')
+    ax_a.set_ylabel("meta-d'", fontsize=18, weight='bold')
     ax_a.set_title("(A) Meta-d' vs d'", fontsize=17, weight='bold', pad=15)
     ax_a.grid(alpha=0.3, linestyle='--')
     ax_a.set_aspect('equal', adjustable='box')
+    ax_a.tick_params(axis='both', labelsize=14)  # 放大刻度标签
     
     # Panel B: 按任务比较 - M-ratio
     ax_b = fig.add_subplot(gs[0, 1])
@@ -253,12 +257,13 @@ def plot_closed_source(base_dir):
                          f'{val:.3f}', ha='center', va='top', fontsize=12, weight='bold')
     
     ax_b.axhline(y=1, color='gray', linestyle='--', alpha=0.6, linewidth=2)
-    ax_b.set_xlabel('Task', fontsize=16, weight='bold')
-    ax_b.set_ylabel('M-ratio', fontsize=16, weight='bold')
+    ax_b.set_xlabel('', fontsize=18, weight='bold')  # 去掉"Task"标签
+    ax_b.set_ylabel('M-ratio', fontsize=18, weight='bold')
     ax_b.set_title("(B) M-ratio by Task", fontsize=17, weight='bold', pad=15)
     ax_b.set_xticks(x)
-    ax_b.set_xticklabels(tasks, fontsize=13)
+    ax_b.set_xticklabels(tasks, fontsize=14)  # 放大x轴刻度标签
     ax_b.grid(axis='y', alpha=0.3, linestyle='--')
+    ax_b.tick_params(axis='both', labelsize=14)  # 放大刻度标签
     
     # 保存
     output_path = os.path.join(base_dir, 'results', 'figures', 'meta_d', 'meta_d_closed_source.pdf')
